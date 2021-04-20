@@ -24,8 +24,10 @@ The monitors are defined as a dictionary of the form
 ```
 The 'brightness' and 'input' keys represent so-called "Features" of a monitor. The values of those keys are the valeus that are either get or set by our scripts. 
 
+But how did we come across these?
+
 ```shell
-ddcutil capabilities --sn=DEADBEEF
+$> ddcutil capabilities --sn=DEADBEEF
 Model: Something
 MCCS version: 2.2
 Commands:
@@ -84,5 +86,15 @@ VCP Features:
       Invalid gamma descriptor: 50 64 78 8c a0
    ...
 ```
+
+There's obviously a lot of output that I left out. For my needs, the only things that matter are brightness, contrast, and input. What I wanted to do was to be able to press *something* (a hotkey, a StreamDeck button, etc.) and have my monitor setup change. Maybe I want the Switch on my center display, the rightmost display off, the top display on HDMI-1, and the left display with the input unchanged but dimmed to its lowest setting. 
+
+Once we have the output, we can simply pick and choose what we want to change. The scripts in this repository are just my kludgy way of automating this.
+
+---
+
+# Reading is for rubes. Just tell me what to do!
+
+Each monitor should have a corresponding entry in the `monitors.yml` file. 
 
 'sn' - The serial number of the monitor. In theory this is unique. In practice...there are exceptions.
