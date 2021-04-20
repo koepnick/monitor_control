@@ -87,7 +87,7 @@ VCP Features:
    ...
 ```
 
-There's obviously a lot of output that I left out. For my needs, the only things that matter are brightness, contrast, and input. What I wanted to do was to be able to press *something* (a hotkey, a StreamDeck button, etc.) and have my monitor setup change. Maybe I want the Switch on my center display, the rightmost display off, the top display on HDMI-1, and the left display with the input unchanged but dimmed to its lowest setting. 
+There's obviously a lot of output that I left out. For my needs, the only things that matter are brightness, orientation, contrast, and input. What I wanted to do was to be able to press *something* (a hotkey, a StreamDeck button, etc.) and have my monitor setup change. Maybe I want the Switch on my center display, the rightmost display off, the top display on HDMI-1, and the left display with the input unchanged but dimmed to its lowest setting. 
 
 Once we have the output, we can simply pick and choose what we want to change. The scripts in this repository are just my kludgy way of automating this.
 
